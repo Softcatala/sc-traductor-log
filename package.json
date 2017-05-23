@@ -1,0 +1,21 @@
+{
+  "name": "sc-traductor-log",
+  "version": "0.0.1",
+  "description": "A simple app to log SC Traductor's data",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  },
+  "author": {
+    "email": "xavi.ivars@gmail.com",
+    "name": "Xavi Ivars"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/softcatala/sc-traductor-log/issues"
+  }
+}

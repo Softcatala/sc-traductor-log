@@ -1,0 +1,1 @@
+Lightweight NodeJS app to store LanguageTool (or similar) logs into a MySQL-like database.
