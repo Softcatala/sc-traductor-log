@@ -17,7 +17,7 @@ var streams = { };
 var getStream = function($lang) {
 
     if ( ! ($lang in streams) ) {
-        streams[$lang] = fs.createWriteStream('data/' + $lang +' .txt', {flags:'a'})
+        streams[$lang] = fs.createWriteStream('data/' + $lang +'.txt', {flags:'a'})
             .on('finish', function() {
                 console.log("Write Finish.");
             })
