@@ -1,12 +1,19 @@
-require('dotenv').config();
-
 var express = require("express");
 var bodyParser = require('body-parser');
 var fs = require('fs');
 
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,POST');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+    next();
+}
+
 var app = express();
 app.use( bodyParser.json() );
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(allowCrossDomain);
 app.use(function(err, req, res, next) {
     res.status(500).send("No s'ha pogut fer parsing dels request!");
 });
